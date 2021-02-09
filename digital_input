@@ -1,0 +1,18 @@
+
+int a;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(4, INPUT);
+}
+
+void loop()
+{
+  a= digitalRead(4);
+  if( a == HIGH){
+    Serial.println("Button di tekan");
+  }else{
+  	Serial.println("Button tidak di tekan");
+  }
+  delay(150);
+}
